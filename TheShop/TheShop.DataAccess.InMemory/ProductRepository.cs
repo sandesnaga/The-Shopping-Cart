@@ -19,7 +19,7 @@ namespace TheShop.DataAccess.InMemory
             products = cache["products"] as List<Product>;
             if(products == null)
             {
-                products = = new List<Product>(); 
+                products = new List<Product>(); 
             }
 
         }
