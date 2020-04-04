@@ -44,11 +44,11 @@ namespace TheShop.WebUI.Controllers
             }
             else
             {
-                if(file != null)
+                if (file != null)
                 {
                     product.Image = product.Id + Path.GetExtension(file.FileName);
-                    file.SaveAs(Server.MapPath("//Content//ProductImages//") +product.Image);
-                }
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + product.Image);
+                }        
                 context.Insert(product);
                 context.Commit();
                 return RedirectToAction("Index");
@@ -92,7 +92,8 @@ namespace TheShop.WebUI.Controllers
                     file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
                 }
                 productToEdit.Category = product.Category;
-                productToEdit.Description = product.Description;                
+                productToEdit.Description = product.Description;
+
                 productToEdit.Name = product.Name;
                 productToEdit.Price = product.Price;
 
